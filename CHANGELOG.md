@@ -59,6 +59,12 @@
 - Removed Craft 4 compatibility
 - Removed `spicyweb\embeddedassets\models\Settings::$showFieldLinkIcon`
 
+## 4.2.0 - 2024-11-12
+
+### Added
+- Added `spicyweb\embeddedassets\actions\Refresh`
+- Added the Refresh element action button to asset indexes on the assets page of the Craft control panel
+
 ## 4.1.2 - 2024-08-20
 
 ### Fixed

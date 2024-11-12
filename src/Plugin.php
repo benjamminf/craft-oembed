@@ -11,6 +11,7 @@ use craft\events\DefineAssetThumbUrlEvent;
 use craft\events\DefineAttributeHtmlEvent;
 use craft\events\DefineGqlTypeFieldsEvent;
 use craft\events\DefineMenuItemsEvent;
+use craft\events\RegisterElementActionsEvent;
 use craft\events\RegisterElementHtmlAttributesEvent;
 use craft\events\RegisterElementTableAttributesEvent;
 use craft\events\RegisterGqlTypesEvent;
@@ -22,6 +23,7 @@ use craft\services\Assets;
 use craft\services\Gql;
 use craft\web\twig\variables\CraftVariable;
 use craft\web\View;
+use spicyweb\embeddedassets\actions\Refresh;
 use spicyweb\embeddedassets\assetpreviews\EmbeddedAsset as EmbeddedAssetPreview;
 use spicyweb\embeddedassets\assets\main\MainAsset;
 use spicyweb\embeddedassets\gql\interfaces\EmbeddedAsset as EmbeddedAssetInterface;
@@ -100,6 +102,7 @@ class Plugin extends BasePlugin
             $this->_registerSaveListener();
             $this->_registerDeleteListener();
             $this->_registerLink();
+            $this->_registerElementActions();
 
             // if showThumbnailsInCp is set to true add in the asset index attribute for the thumbnails
             if ($this->getSettings()->showThumbnailsInCp) {
@@ -261,6 +264,13 @@ class Plugin extends BasePlugin
             if ($event->sender instanceof Asset) {
                 Craft::$app->getCache()->delete($this->methods->getCachedAssetKey($event->sender));
             }
+        });
+    }
+
+    private function _registerElementActions(): void
+    {
+        Event::on(Asset::class, Asset::EVENT_REGISTER_ACTIONS, function(RegisterElementActionsEvent $event) {
+            $event->actions[] = Refresh::class;
         });
     }
 
