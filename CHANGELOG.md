@@ -1,5 +1,11 @@
 # Changelog
 
+## 5.4.0 - 2024-11-12
+
+### Added
+- Added `spicyweb\embeddedassets\actions\Refresh` (previously added in 4.2.0)
+- Added the Refresh element action button to asset indexes on the assets page of the Craft control panel (previously added in 4.2.0)
+
 ## 5.3.0 - 2024-11-06
 
 ### Added
