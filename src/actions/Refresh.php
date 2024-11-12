@@ -41,7 +41,7 @@ class Refresh extends ElementAction
 })();
 JS, [static::class, str_replace('\\', '\\\\', Asset::class)]);
 
-        return null;
+        return Craft::$app->getView()->renderTemplate('embeddedassets/_components/elementactions/refresh/trigger.twig');
     }
 
     /**

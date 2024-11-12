@@ -40,7 +40,7 @@ export default class Preview extends Emitter {
       </div>
     `)
 
-    this.$iframe = this.$element.find(`#${iframeId}`) as JQuery<HTMLIFrameElement>
+    this.$iframe = this.$element.find(`#${iframeId}`)
 
     this._setupHeightMonitor()
   }
