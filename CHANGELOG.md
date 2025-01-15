@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.4.1 - 2025-01-15
+
+### Fixed
+- Fixed direct Vimeo URL embedded assets saving incorrect URLs (thanks @boboldehampsink)
+
 ## 5.4.0 - 2024-11-12
 
 ### Added
