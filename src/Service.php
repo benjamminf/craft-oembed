@@ -129,6 +129,7 @@ class Service extends Component
             'nhpbs.org' => PbsExtractor::class,
             'openstreetmap.org' => OpenStreetMapExtractor::class,
             'sharepoint.com' => SharepointExtractor::class,
+            'vimeocdn.com' => AkamaiExtractor::class,
         ];
 
         // Because Embed doesn't do pattern matching on hosts anymore
