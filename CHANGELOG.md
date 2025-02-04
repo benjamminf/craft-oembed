@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.4.2 - 2025-02-04
+
+### Fixed
+- Fixed a deprecation warning that occurred on Craft 5.6.0 and later
+
 ## 5.4.1 - 2025-01-15
 
 ### Fixed
