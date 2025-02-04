@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 4.2.2 - 2025-02-04
 
 ### Fixed
 - Fixed a deprecation warning that occurred on Craft 4.14.0 and later
