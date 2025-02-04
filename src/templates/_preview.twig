@@ -39,7 +39,7 @@
 					</li>
 				{% endif %}
 				{% if embeddedAsset.type %}
-					<li>{{ embeddedAsset.type|ucfirst|t('embeddedassets') }}</li>
+					<li>{{ embeddedAsset.type|capitalize|t('embeddedassets') }}</li>
 				{% endif %}
 				{% if not embeddedAsset.isSafe() %}
 					<li><i id="warning" class="warning"></i></li>
