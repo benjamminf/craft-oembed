@@ -587,6 +587,10 @@ class Service extends Component
 
                     $width = $width ? floatval($width) : null;
                     $height = $height ? floatval($height) : null;
+                } elseif (($imgElement = $dom->getElementsByTagName('img')->item(0)) !== null) {
+                    $imageInfo = getimagesize($imgElement->getAttribute('src'));
+                    $width = $imageInfo[0];
+                    $height = $imageInfo[1];
                 }
             }
         }
