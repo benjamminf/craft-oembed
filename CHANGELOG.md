@@ -75,6 +75,11 @@
 - Removed Craft 4 compatibility
 - Removed `spicyweb\embeddedassets\models\Settings::$showFieldLinkIcon`
 
+## 4.2.3 - 2025-02-11
+
+### Changed
+- Embedded assets for external images now save the image width and height in the JSON file
+
 ## 4.2.2 - 2025-02-04
 
 ### Fixed
